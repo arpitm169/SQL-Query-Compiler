@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SQL Query Compiler</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Background grid decoration -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <div class="wrapper">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-badge">v1.0 · Compiler</div>
+      <h1 class="title">SQL Query <span class="title-accent">Compiler</span></h1>
+      <p class="subtitle">Tokenize, parse, and transform your SQL into relational algebra — instantly.</p>
+    </header>
+
+    <!-- Main card -->
+    <main class="card">
+
+      <!-- Input Section -->
+      <section class="section input-section">
+        <label class="section-label" for="sqlInput">
+          <span class="label-icon">&#9654;</span> SQL Query Input
+        </label>
+        <div class="textarea-wrapper">
+          <textarea
+            id="sqlInput"
+            class="sql-input"
+            placeholder="e.g. SELECT name FROM students WHERE age > 18;"
+            spellcheck="false"
+            autocomplete="off"
+          ></textarea>
+          <div class="textarea-line-gutter" aria-hidden="true" id="lineGutter"></div>
+        </div>
+        <div class="input-footer">
+          <span class="char-count" id="charCount">0 characters</span>
+          <button class="btn-compile" id="compileBtn">
+            <span class="btn-text">Compile</span>
+            <span class="btn-icon">&#10148;</span>
+          </button>
+        </div>
+        <!-- Error message -->
+        <div class="error-msg" id="errorMsg" role="alert" aria-live="polite"></div>
+      </section>
+
+      <!-- Loading animation -->
+      <div class="loader-bar" id="loaderBar" aria-hidden="true">
+        <div class="loader-track"></div>
+      </div>
+
+      <!-- Output Sections (hidden until compile) -->
+      <div class="output-wrapper" id="outputWrapper">
+
+        <!-- Tokens -->
+        <section class="section output-section" id="tokenSection">
+          <div class="section-header">
+            <span class="section-tag tag-blue">01</span>
+            <label class="section-label">Tokens</label>
+          </div>
+          <div class="output-box mono" id="tokenOutput"></div>
+        </section>
+
+        <!-- Parse Tree -->
+        <section class="section output-section" id="parseSection">
+          <div class="section-header">
+            <span class="section-tag tag-amber">02</span>
+            <label class="section-label">Parse Tree</label>
+          </div>
+          <div class="output-box mono" id="parseOutput"></div>
+        </section>
+
+        <!-- Intermediate Code -->
+        <section class="section output-section" id="irSection">
+          <div class="section-header">
+            <span class="section-tag tag-green">03</span>
+            <label class="section-label">Intermediate Code <em>(Relational Algebra)</em></label>
+          </div>
+          <div class="output-box mono" id="irOutput"></div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="footer">SQL Query Compiler &mdash; Built with pure HTML, CSS &amp; JS</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

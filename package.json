@@ -1,0 +1,15 @@
+{
+  "name": "sql-query-compiler",
+  "version": "1.0.0",
+  "description": "A SQL compiler with a C++ backend and web frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build:cpp": "g++ compiler/main.cpp compiler/lexer.cpp compiler/parser.cpp compiler/ir.cpp -o compiler/compiler.exe",
+    "test:cpp": "echo SELECT * FROM users | compiler/compiler.exe"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
