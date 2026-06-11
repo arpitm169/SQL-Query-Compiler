@@ -40,6 +40,9 @@ The system tokenizes SQL statements, constructs a parse tree to validate query s
 - Database integration
 
 ![image alt](https://github.com/arpitm169/SQL-Query-Compiler/blob/14648efe977f5bda93df61df1c4722833f214467/Screenshot%202026-06-11%20231818.png)
+![image alt](https://github.com/arpitm169/SQL-Query-Compiler/blob/a2c61d97d04e2c42fc6f356e27ae6d30c5c289a9/Screenshot%202026-06-11%20231829.png)
+![image alt](https://github.com/arpitm169/SQL-Query-Compiler/blob/14648efe977f5bda93df61df1c4722833f214467/Screenshot%202026-06-11%20231818.png)
+https://github.com/arpitm169/SQL-Query-Compiler/blob/a2c61d97d04e2c42fc6f356e27ae6d30c5c289a9/Screenshot%202026-06-11%20231829.png
 
 ## Author
 
