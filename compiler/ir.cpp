@@ -1,4 +1,4 @@
-#include "ir.h
+#include "ir.h"
 #include <sstream>
 
 Node* IRGenerator::generate(Node* root) {
