@@ -10,3 +10,5 @@ private:
     Node* generateSelect(Node* whereClause);
     Node* generateScan(Node* fromClause);
 };
+
+making new changes
