@@ -1,4 +1,4 @@
-commit badhane hai/**
+/**
  * SQL Query Compiler — script.js
  * Pure JavaScript: tokenizer, mock parser, IR generator
  * and DOM rendering with syntax highlighting.
